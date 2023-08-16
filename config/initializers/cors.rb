@@ -16,9 +16,9 @@
 # end
 
 Rails.application.config.middleware.insert_before 0, Rack::Cors do
-    allow do
-      origins 'http://localhost:3001' # The origin of your React app
-      resource '*', headers: :any, 
-      methods: %i[get post put patch delete options]
-    end
+  allow do
+    origins 'http://localhost:3001' # The origin of your React app
+    resource '*', headers: :any,
+                  methods: %i[get post put patch delete options]
   end
+end
